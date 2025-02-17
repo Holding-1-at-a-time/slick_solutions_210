@@ -11,12 +11,12 @@
     * - Modification    : 
 **/
 // app/(app)/dashboard/page.tsx
-import { auth } from "@clerk/nextjs";
+import { Navbar } from "@/components/navigation/Navbar";
+import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { Navbar } from "@/components/Navbar";
 
 export default function DashboardPage() {
-    const { userId } = auth();
+    const userId = auth();
 
     if (!userId) {
         redirect("/sign-in");

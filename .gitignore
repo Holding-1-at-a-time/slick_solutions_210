@@ -45,3 +45,13 @@ package-lock.json
 
 # clerk configuration (can include secrets)
 /.clerk/
+
+
+.early.coverage
+
+# env
+.env
+.env.local
+.env.development
+.env.test
+.env.production
